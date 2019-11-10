@@ -1,0 +1,18 @@
+version: "3"
+services:
+  eureka-server:
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    volumes:
+      - ./eureka-server:/app
+    ports:
+      - 8761:8761
+    networks:
+      - bp
+volumes:
+  cloud:
+    external: true
+networks:
+  bp:
+    external: true
