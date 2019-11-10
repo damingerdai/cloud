@@ -4,10 +4,16 @@ services:
     build:
       context: ./eureka-server
       dockerfile: Dockerfile
-    volumes:
-      - ./eureka-server:/app
     ports:
       - 8761:8761
+    networks:
+      - bp
+  hi-service:
+    build:
+      context: ./hi
+      dockerfile: Dockerfile
+    ports:
+      - 8762:8762
     networks:
       - bp
 volumes:
