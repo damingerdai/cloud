@@ -11,7 +11,7 @@
     <groupId>org.daming</groupId>
     <artifactId>hi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hi</name>
+    <name>service-hi</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

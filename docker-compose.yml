@@ -10,7 +10,7 @@ services:
       - bp
   hi-service:
     build:
-      context: ./hi
+      context: ./service-hi
       dockerfile: Dockerfile
     depends_on:
       - eureka-server
