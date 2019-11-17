@@ -20,6 +20,18 @@ services:
       - eureka-server
     networks:
       - bp
+  ribbon-service:
+    build:
+      context: ./service-ribbon
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-server
+    ports:
+      - 8764:8764
+    links:
+      - eureka-server
+    networks:
+      - bp
 volumes:
   cloud:
     external: true
