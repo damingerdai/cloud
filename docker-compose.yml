@@ -4,10 +4,32 @@ services:
     build:
       context: ./eureka-server
       dockerfile: Dockerfile
-    volumes:
-      - ./eureka-server:/app
     ports:
       - 8761:8761
+    networks:
+      - bp
+  hi-service:
+    build:
+      context: ./service-hi
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-server
+    ports:
+      - 8762:8762
+    links:
+      - eureka-server
+    networks:
+      - bp
+  ribbon-service:
+    build:
+      context: ./service-ribbon
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-server
+    ports:
+      - 8764:8764
+    links:
+      - eureka-server
     networks:
       - bp
 volumes:
