@@ -9,12 +9,9 @@
     </parent>
     <groupId>org.daming</groupId>
     <artifactId>service-hi</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>service-hi</name>
     <description>Demo project for Spring Boot</description>
-
-    <properties>
-    </properties>
 
     <dependencies>
         <dependency>
