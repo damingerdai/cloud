@@ -8,3 +8,6 @@ server:
 spring:
   application:
     name: service-ribbon
+logging:
+  level:
+    org.daming.service.ribbon.HelloFeignClient: INFO
