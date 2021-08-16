@@ -6,15 +6,17 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class HelloService {
 
-    private RestTemplate restTemplate;
+    // private RestTemplate restTemplate;
+    private HelloFeignClient helloFeignClient;
 
     public String hiService(String name) {
-        return restTemplate.getForObject("http://SERVICE-HI/hi?name="+name,String.class);
+        // return restTemplate.getForObject("http://SERVICE-HI/hi?name="+name,String.class);
+        return this.helloFeignClient.hi(name);
     }
 
 
-    public HelloService(RestTemplate restTemplate) {
+    public HelloService(HelloFeignClient helloFeignClient) {
         super();
-        this.restTemplate = restTemplate;
+        this.helloFeignClient = helloFeignClient;
     }
 }
