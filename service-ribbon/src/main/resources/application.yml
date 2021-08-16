@@ -11,3 +11,12 @@ spring:
 logging:
   level:
     org.daming.service.ribbon.HelloFeignClient: INFO
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        #include: health,info,hystrix.stream,actuator #根据需求增删路径
