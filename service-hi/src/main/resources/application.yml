@@ -6,6 +6,8 @@ spring:
     name: service-hi
 
 eureka:
+  instance:
+    prefer-ip-address: true #以IP地址注册到服务中心，相互注册使用IP地址
   client:
     serviceUrl:
       #defaultZone: http://eureka-server:8761/eureka/
