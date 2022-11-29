@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:12345@localhost:8761/eureka/
+server:
+  port: 8765
+spring:
+  application:
+    name: monitor
+turbine:
+  combine-host-port: true
+  app-config: service-hi,service-ribbon
+  cluster-name-expression: metadata['default']
+  aggregator:
+    cluster-config: default
+  instanceUrlSuffix: /actuator/hystrix.stream
