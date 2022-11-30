@@ -27,6 +27,7 @@
         <module>service-hi</module>
         <module>service-ribbon</module>
         <module>monitor</module>
+        <module>gateway</module>
     </modules>
 
     <dependencyManagement>
